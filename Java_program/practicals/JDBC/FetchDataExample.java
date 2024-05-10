@@ -12,7 +12,7 @@ public class FetchDataExample {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             // Create a connection to the database
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_new_database", "root", "India@1234");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_new_database", "root", "mysql123");
 
             // Create a statement
             statement = connection.createStatement();
