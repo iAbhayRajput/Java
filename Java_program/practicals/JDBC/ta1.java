@@ -6,7 +6,7 @@ import java.sql.Statement;
 public class ta1 {
    static final String DB_URL = "jdbc:mysql://localhost:3306/my_new_database"; 
    static final String USER = "root"; //USERNAME
-   static final String PASS = "India@1234"; //PASSWORD
+   static final String PASS = "mysql123"; //PASSWORD
 
    public static void main(String[] args) {
       try(Connection conn = DriverManager.getConnection(DB_URL, USER, PASS);
