@@ -1,0 +1,45 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class CarFrame extends JFrame {
+    public CarFrame() {
+        setTitle("Car Drawing");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        super.paint(g);
+        
+        // Set background color
+        setBackground(Color.cyan);
+
+        // Draw the car body
+        g.setColor(Color.red);
+        g.fillRect(100, 150, 200, 50); // Main body
+        g.fillRect(140, 120, 120, 50);  // Top part of the car
+
+        // Draw the windows
+        g.setColor(Color.white);
+        g.fillRect(150, 125, 40, 40); // Left window
+        g.fillRect(210, 125, 40, 40); // Right window
+
+        // Draw the wheels
+        g.setColor(Color.black);
+        g.fillOval(110, 190, 50, 50); // Left wheel
+        g.fillOval(240, 190, 50, 50); // Right wheel
+
+        // Draw road
+        g.setColor(Color.darkGray);
+        g.fillRect(0, 240, 400, 20); // Road
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            new CarFrame();
+        });
+    }
+}
